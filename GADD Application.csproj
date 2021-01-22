@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DEB05548-B350-4117-927B-B94F6A08A2EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GADD_Application</RootNamespace>
+    <AssemblyName>GADD Application</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://server.sphub.ca/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://server.sphub.ca/Launcher/</InstallUrl>
+    <SupportUrl>https://sphub.ca</SupportUrl>
+    <ErrorReportUrl>https://sphub.ca</ErrorReportUrl>
+    <ProductName>GADD Launcher</ProductName>
+    <PublisherName>Brett Nordin</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.1.45.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>GADD_Application.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>24DEF9F7E150556D416904FD33B522034B44DC84</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GADD Application_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>BUILD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip">
+      <HintPath>..\MCL\CmlLib\bin\Release\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MCL\CmlLib\bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SphubCML">
+      <HintPath>..\MCL\CmlLib\BUILD\SphubCML.dll</HintPath>
+    </Reference>
+    <Reference Include="SphubCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\SphubCore\bin\SphubCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\definitions.cs" />
+    <Compile Include="Classes\Processes.cs" />
+    <Compile Include="Classes\FontSystem.cs" />
+    <Compile Include="Classes\MCHandler.cs" />
+    <Compile Include="Classes\Steam\SteamHelper.cs" />
+    <Compile Include="Classes\toolkit.cs" />
+    <Compile Include="Forms\Console.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Console.Designer.cs">
+      <DependentUpon>Console.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\diagnostics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\diagnostics.Designer.cs">
+      <DependentUpon>diagnostics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JVDWN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JVDWN.Designer.cs">
+      <DependentUpon>JVDWN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Launch2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Launch2.Designer.cs">
+      <DependentUpon>Launch2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Arma\MainWindowArma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Arma\MainWindowArma.Designer.cs">
+      <DependentUpon>MainWindowArma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Minecraft\GADDPAGE_Contents\MCSettings.cs" />
+    <Compile Include="Pages\Minecraft\GADDPAGE_Contents\MCSettings.Designer.cs">
+      <DependentUpon>MCSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Minecraft\LoginMC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Minecraft\LoginMC.Designer.cs">
+      <DependentUpon>LoginMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Minecraft\MainWindowMC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Minecraft\MainWindowMC.Designer.cs">
+      <DependentUpon>MainWindowMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Pages\Minecraft\GADDPAGE_Contents\GaddPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Minecraft\GADDPAGE_Contents\GaddPage.Designer.cs">
+      <DependentUpon>GaddPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Console.resx">
+      <DependentUpon>Console.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\diagnostics.resx">
+      <DependentUpon>diagnostics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Arma\MainWindowArma.resx">
+      <DependentUpon>MainWindowArma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Minecraft\GADDPAGE_Contents\MCSettings.resx">
+      <DependentUpon>MCSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Minecraft\GADDPAGE_Contents\GaddPage.resx">
+      <DependentUpon>GaddPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JVDWN.resx">
+      <DependentUpon>JVDWN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Launch2.resx">
+      <DependentUpon>Launch2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Minecraft\LoginMC.resx">
+      <DependentUpon>LoginMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Minecraft\MainWindowMC.resx">
+      <DependentUpon>MainWindowMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\ZillaSlabHighlight-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArmA_3_Logo_%28Black_Transparent%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d0b1fbcf89aa5e851b3c7e9d86c77f48816b909fda39a3ee5e6b4b0d3255bfef95601890afd80709da39a3ee5e6b4b0d3255bfef95601890afd8070905ccb9558d135c6627fbe265fa4dab9d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d0b1fbcf89aa5e851b3c7e9d86c77f48816b909fda39a3ee5e6b4b0d3255bfef95601890afd80709da39a3ee5e6b4b0d3255bfef95601890afd8070905ccb9558d135c6627fbe265fa4dab9d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ArmA_3_Logo_%28Black_Transparent%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mansalva-Regular.ttf" />
+    <None Include="Resources\Orbitron-Black.ttf" />
+    <None Include="Resources\Orbitron-Bold.ttf" />
+    <None Include="Resources\Orbitron-Medium.ttf" />
+    <None Include="Resources\Orbitron-Regular.ttf" />
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TESTMC_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TESTMC_logo1.png" />
+    <None Include="Resources\icons8-upload-to-the-cloud-48.png" />
+    <None Include="Resources\icons8-unavailable-48.png" />
+    <None Include="Resources\icons8-tick-box-48.png" />
+    <None Include="Resources\icons8-settings-48.png" />
+    <None Include="Resources\icons8-key-48.png" />
+    <None Include="Resources\icons8-file-48.png" />
+    <None Include="Resources\icons8-edit-48.png" />
+    <None Include="Resources\icons8-download-from-the-cloud-48.png" />
+    <None Include="Resources\icons8-delete-48.png" />
+    <None Include="Resources\GADDMC_MAIN_SHADOW.png" />
+    <None Include="Resources\EsportGADD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Liv1_Phil.png" />
+    <None Include="Resources\Greybackground2.png" />
+    <Content Include="version.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\split-logo.png" />
+    <None Include="Resources\split.png" />
+    <None Include="Resources\FullColor_IconOnly_1024x1024_72dpi.png" />
+    <None Include="Resources\Minecraft-Path-Tracing-Feature.jpg" />
+    <None Include="Resources\Greybackground.png" />
+    <None Include="Resources\Greybackground1.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\Minecraft-con-SEUS.jpg" />
+    <None Include="Resources\Minecraft-con-SEUS1.jpg" />
+    <None Include="Resources\EsportGADD1.png" />
+    <None Include="Resources\60793.png" />
+    <None Include="Resources\231.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
